@@ -40,7 +40,7 @@ server.
 # Sample Results
 (run on an aging mac mini with one processor with two cores)
 
-The output of the 50 synchrounous requests that are completing with 500 other synchronous connections:
+The output of the 50 synchrounous requests that are competing with 500 other synchronous connections:
 ```
 Running 10s test @ http://localhost:4567/data
   5 threads and 50 connections
@@ -52,7 +52,7 @@ Running 10s test @ http://localhost:4567/data
 Requests/sec:     24.98
 Transfer/sec:      4.10KB
 ```
-The output of the 50 synchrounous requests that are completing with 500 asynchronous connections:
+The output of the 50 synchrounous requests that are competing with 500 asynchronous connections:
 ```
 Running 10s test @ http://localhost:4567/data
   5 threads and 50 connections
@@ -64,7 +64,7 @@ Requests/sec:  18715.12
 Transfer/sec:      3.00MB
 ```
 
-So the throughput with async requests is 753x better and there were zero socket errors. 
+So the throughput with async requests is 753x better and there were zero socket errors!
 
 # Build
 To rebuild the benchmark:
